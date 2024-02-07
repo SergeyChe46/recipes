@@ -11,4 +11,12 @@
   margin-bottom: 5px;
   cursor: pointer;
   font-size: large;
-}
+  background-color: forestgreen;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .rating-sort:active,
+  .dufficulty-sort:active {
+    background-color: rgb(22, 92, 22);
+  }
