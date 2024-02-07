@@ -1,0 +1,14 @@
+.sort-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.rating-sort,
+.dufficulty-sort {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: large;
+}

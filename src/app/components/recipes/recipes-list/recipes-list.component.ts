@@ -9,17 +9,25 @@ import { RecipesService } from '../../../services/recipes.service';
   styleUrl: './recipes-list.component.css',
 })
 export class RecipesListComponent implements OnInit {
-  #recipes: IRecipe[] = [];
-  get Recipes() {
-    return this.#recipes;
-  }
-
   constructor(
     private recipeService: RecipesService,
     private toastr: ToastrService
   ) {}
   ngOnInit(): void {
     this.#getAllRecipes();
+  }
+
+  #recipes: IRecipe[] = [];
+  #sortAscending: boolean = true;
+  get Recipes() {
+    return this.#recipes;
+  }
+
+  sortRecipesBy(sortField: 'rating' | 'difficulty'): void {
+    this.#recipes = this.#recipes.sort((recipeA: any, recipeB: any) => {
+      return recipeB[sortField] > recipeA[sortField] ? 1 : -1;
+    });
+    this.#ReverseSortedList();
   }
 
   #getAllRecipes(): void {
@@ -29,5 +37,11 @@ export class RecipesListComponent implements OnInit {
         this.toastr.success('Загружено');
       },
     });
+  }
+  #ReverseSortedList(): void {
+    this.#recipes = this.#sortAscending
+      ? this.#recipes
+      : this.#recipes.reverse();
+    this.#sortAscending = !this.#sortAscending;
   }
 }

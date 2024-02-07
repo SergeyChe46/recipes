@@ -10,10 +10,13 @@
   font-size: larger;
   border-color: green;
   border-radius: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   outline: none;
 }
 
 #search-text:focus {
   background-color: lightblue;
+}
+.search {
+  margin-bottom: 0;
 }

@@ -1,3 +1,9 @@
+<div class="sort-buttons">
+  <button class="rating-sort"
+          (click)="sortRecipesBy('rating')">Сортировать по рейтингу</button>
+  <button class="dufficulty-sort"
+          (click)="sortRecipesBy('difficulty')">Сортировать по сложности</button>
+</div>
 <div *ngFor="let recipe of Recipes">
   <app-recipes-item [recipe]="recipe"></app-recipes-item>
 </div>
