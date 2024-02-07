@@ -1,0 +1,14 @@
+<article class="recipe-item"
+         popovertarget="">
+  <div class="recipe-header">
+    <h3 class="recipe-name">{{recipe?.name}}</h3>
+    <h2 class="recipe-rating">{{recipe?.rating}}</h2>
+    <h2 class="recipe-difficulty {{recipe?.difficulty | lowercase}}">{{recipe?.difficulty}}</h2>
+  </div>
+  <div class="ingredients-list">
+    <span class="ingredient"
+          *ngFor="let ingredients of recipe?.ingredients">
+      {{ingredients|lowercase|removecomma}}
+    </span>
+  </div>
+</article>
