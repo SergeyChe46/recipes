@@ -30,6 +30,23 @@
   display: inline;
 }
 
+.recipe-image {
+  visibility: hidden;
+  position: absolute;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+}
+
+.recipe-item:hover .recipe-image {
+  visibility: visible;
+}
+
+#top {
+  top: 0;
+  left: 0;
+}
 .easy {
   color: rgb(10, 255, 10);
 }

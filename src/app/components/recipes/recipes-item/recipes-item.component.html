@@ -1,5 +1,5 @@
 <article class="recipe-item"
-         popovertarget="">
+         appShowImage>
   <div class="recipe-header">
     <h3 class="recipe-name">{{recipe?.name}}</h3>
     <h2 class="recipe-rating">{{recipe?.rating}}</h2>
@@ -11,4 +11,8 @@
       {{ingredients|lowercase|removecomma}}
     </span>
   </div>
+  <img src="{{recipe?.image}}"
+       alt="recipe-image"
+       class="recipe-image"
+       id="top">
 </article>
