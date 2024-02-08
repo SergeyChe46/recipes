@@ -1,4 +1,5 @@
 <article class="recipe-item"
+         #recipeItem
          appShowImage>
   <div class="recipe-header">
     <h3 class="recipe-name">{{recipe?.name}}</h3>
@@ -11,7 +12,8 @@
       {{ingredients|lowercase|removecomma}}
     </span>
   </div>
-  <img src="{{recipe?.image}}"
+  <img #image
+       src="{{recipe?.image}}"
        alt="recipe-image"
        class="recipe-image"
        id="top">
