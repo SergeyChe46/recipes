@@ -16,7 +16,7 @@ import { IRecipe } from '../../../../models/recipe.interface';
 })
 export class RecipesItemComponent implements AfterViewInit {
   @Input() recipe: IRecipe | undefined;
-  @ViewChild('image') imageUrl!: ElementRef<HTMLDivElement>;
+  @ViewChild('image') imageUrl!: ElementRef<HTMLImageElement>;
   @ViewChild('recipeItem') recipeItem!: ElementRef<HTMLDivElement>;
 
   private mouseMove = () =>
